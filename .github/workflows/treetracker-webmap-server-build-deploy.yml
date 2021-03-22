@@ -7,13 +7,13 @@ name: Webmap Server CI/CD
 on:
   push:
     paths:
-    - 'server/**'
+    - '**'
     - '.github/workflows/treetracker-webmap-server*'
     branches:
       - master
 
 env: 
-  project-directory: ./server
+  project-directory: ./
 
 jobs:
   #  test:
@@ -64,8 +64,8 @@ jobs:
       id: docker_build_snapshot_merge
       uses: docker/build-push-action@v2
       with:
-        context: ./server
-        file: ./server/Dockerfile
+        context: ./
+        file: Dockerfile
         push: true
         tags: greenstand/treetracker-webmap-api:${{ steps.package-version.outputs.current-version }}
     - shell: bash
@@ -105,7 +105,7 @@ jobs:
     - name: Install kustomize
       run: curl -s "https://raw.githubusercontent.com/kubernetes-sigs/kustomize/master/hack/install_kustomize.sh"  | bash
     - name: Run kustomize
-      run: (cd server/deployment/base && ../../../kustomize edit set image greenstand/treetracker-webmap-api:${{ steps.image-tag-name.outputs.image-tag-name }} )
+      run: (cd deployment/base && ../../kustomize edit set image greenstand/treetracker-webmap-api:${{ steps.image-tag-name.outputs.image-tag-name }} )
     - name: Install doctl for kubernetes
       uses: digitalocean/action-doctl@v2
       with:
@@ -115,7 +115,7 @@ jobs:
 #    - name: Delete completed migration jobs prior to deployment
 #      run: kubectl -n webmap delete job --ignore-not-found=true  webmap-db-migration-job
     - name: Update kubernetes resources
-      run: kustomize build server/deployment/overlays/development | kubectl apply -n webmap --wait -f -
+      run: kustomize build deployment/overlays/development | kubectl apply -n webmap --wait -f -
       #    - name: Attempt to wait for migration job to complete
       # run: kubectl wait --for=condition=complete --timeout=45s job/webmap-db-migration-job
 

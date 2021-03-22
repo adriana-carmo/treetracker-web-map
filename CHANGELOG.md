@@ -1,3 +1,19 @@
+## [1.11.1](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.0...v1.11.1) (2021-03-20)
+
+
+### Bug Fixes
+
+* Update README for local development ([4fdd281](https://github.com/Greenstand/treetracker-web-map/commit/4fdd281fd447dfbe755148eafa76ec9e23ca9b58))
+* Update README for local development ([090714a](https://github.com/Greenstand/treetracker-web-map/commit/090714a2bf777b5ab21902b3a3fb7fc4644e47fe))
+
+# [1.11.0](https://github.com/Greenstand/treetracker-web-map/compare/v1.10.0...v1.11.0) (2021-03-20)
+
+
+### Features
+
+* can show nearest tree on tree point levels ([284f5ae](https://github.com/Greenstand/treetracker-web-map/commit/284f5aec805574bbf8a191ba6150644868aa5288))
+* fn to scan the utf grid ([2a2bf3f](https://github.com/Greenstand/treetracker-web-map/commit/2a2bf3f7bc233a98b364ad8e0cf34f73108d33b5))
+
 # [1.10.0](https://github.com/Greenstand/treetracker-web-map/compare/v1.9.3...v1.10.0) (2021-03-18)
 
 
