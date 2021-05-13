@@ -27,12 +27,13 @@ jobs:
       #run: npm run build
       #working-directory: ${{ env.project-directory }}
   build:
+    needs: stop
     name: Release and Build
     runs-on: ubuntu-latest
     if: |
       !contains(github.event.head_commit.message, 'skip-ci') &&
       github.event_name == 'push' &&
-      github.repository == 'Greenstand/treetracker-web-map'
+      github.repository == 'Greenstand/treetracker-web-map-api'
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js 12.x
@@ -85,7 +86,7 @@ jobs:
     if: |
       !contains(github.event.head_commit.message, 'skip-ci') &&
       github.event_name == 'push' &&
-      github.repository == 'Greenstand/treetracker-web-map'
+      github.repository == 'Greenstand/treetracker-web-map-api'
     steps:
     - uses: actions/checkout@v2
     - name: get-npm-version
@@ -111,7 +112,7 @@ jobs:
       with:
         token: ${{ secrets.DIGITALOCEAN_TOKEN }}
     - name: Save DigitalOcean kubeconfig
-      run: doctl kubernetes cluster kubeconfig save ${{ secrets.CLUSTER_NAME }}
+      run: doctl kubernetes cluster kubeconfig save ${{ secrets.DEV_CLUSTER_NAME }}
 #    - name: Delete completed migration jobs prior to deployment
 #      run: kubectl -n webmap delete job --ignore-not-found=true  webmap-db-migration-job
     - name: Update kubernetes resources

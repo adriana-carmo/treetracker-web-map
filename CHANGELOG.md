@@ -1,3 +1,61 @@
+## [1.11.9](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.8...v1.11.9) (2021-05-04)
+
+
+### Bug Fixes
+
+* workflow had extra steps in wrong order ([ff23c6c](https://github.com/Greenstand/treetracker-web-map/commit/ff23c6c2b917f017bed80f514f744253a6de8b7d))
+
+## [1.11.8](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.7...v1.11.8) (2021-05-04)
+
+
+### Bug Fixes
+
+* add eslint config ([975788b](https://github.com/Greenstand/treetracker-web-map/commit/975788b4d8857da9102c437773f632f7245c5dae))
+* bring package-lock.json up to date ([ea39392](https://github.com/Greenstand/treetracker-web-map/commit/ea39392a2f2f1bcf64c3883a8fac0e6da8a9f171))
+* skip tests ([293af67](https://github.com/Greenstand/treetracker-web-map/commit/293af67d7ec041686d86566dac380a72014d57a5))
+
+## [1.11.7](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.6...v1.11.7) (2021-04-12)
+
+
+### Bug Fixes
+
+* temporarily open CORS ([55dc487](https://github.com/Greenstand/treetracker-web-map/commit/55dc4874c6192eef40d656165a04caa6ba652eaf))
+
+## [1.11.6](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.5...v1.11.6) (2021-04-12)
+
+
+### Bug Fixes
+
+* open CORS temporarily ([6e64b2e](https://github.com/Greenstand/treetracker-web-map/commit/6e64b2e46e34004010c004297fc039e47e08a5b1))
+
+## [1.11.5](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.4...v1.11.5) (2021-04-02)
+
+
+### Bug Fixes
+
+* fix manual deployment actions ([39faa73](https://github.com/Greenstand/treetracker-web-map/commit/39faa7379c13056cfe54bc81db7fedd6ff8fc329))
+
+## [1.11.4](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.3...v1.11.4) (2021-04-02)
+
+
+### Bug Fixes
+
+* fix repository name match ([62d7458](https://github.com/Greenstand/treetracker-web-map/commit/62d745809f358a7455cae6e3c2a63b8eb630abce))
+
+## [1.11.3](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.2...v1.11.3) (2021-04-02)
+
+
+### Bug Fixes
+
+* update and clean up CORS settings ([7d15297](https://github.com/Greenstand/treetracker-web-map/commit/7d152979b4c569966ba91dc62107d5ec53756cfd))
+
+## [1.11.2](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.1...v1.11.2) (2021-04-02)
+
+
+### Bug Fixes
+
+* increase LRU cache time ([e052d45](https://github.com/Greenstand/treetracker-web-map/commit/e052d45e2b18a10bb48c08c2e815b6576b844eb2))
+
 ## [1.11.1](https://github.com/Greenstand/treetracker-web-map/compare/v1.11.0...v1.11.1) (2021-03-20)
 
 
